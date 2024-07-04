@@ -1,0 +1,365 @@
+html{cursor:url('../images/mainc.png'),auto;height: 100%;}
+body{margin:0;padding:0;background:radial-gradient(#b3ffff,#4da6ff);background-size:cover;font-family:sans-serif;display:flex;flex-direction:column;}
+body.dark-theme{background:radial-gradient(#183063,#16192b);}
+.headerbody{padding:30px 0 30px 0;width:100%;}
+.footerbody{padding:30px 0 30px 0;width:100%;}
+.logo{display:block;margin:auto;}
+.poringlogo{transition:2s;}
+.poringlogo:hover{transition:.8s;filter:drop-shadow(0 0 10px #ffe6ea);}
+.logocaption{font-size:115%;text-align:center;color:white;text-shadow:0 0 6px #ff99aa;opacity:.9;margin:0;}
+.caption-gen{text-align:center;color:white;text-shadow:0 0 6px #ff99aa;opacity:.9;margin:0;}
+.caption-gen-2{text-align:center;color:white;text-shadow:0 0 6px #ff99aa;opacity:.9;margin:0;font-size:80%;}
+.inner-body{display:flex;justify-content:center;position:relative;height:1020px;width:100%;}
+.section-container-1{width:auto;height:auto;position:absolute;display:flex;flex-direction:column;justify-content:center;align-items:center;margin-bottom:25px;background-size:cover;display:block;}
+.section-container-2{width:auto;height:auto;position:absolute;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;margin-bottom:25px;background-size:cover;display:none;}
+.section{display:flex;width:auto;height:60px;}
+.section-d{display:flex;width:auto;height:80px;}
+.dungeon-cont{display:flex;text-align:center;align-items:center;width:auto;height:60px;}
+.hide{visibility:hidden}
+.maps{width:56px;height:56px;margin:2px;position:relative;background:#222222;}
+.portal-right:before{content:'';width:4px;height:10px;background:#222;position:absolute;right:-4px;top:23px;}
+.dark-theme .portal-right:before{background-color:#6a6a6a;}
+.portal-right-d:before{content:'';width:4px;height:10px;background:#aaaaaa;position:absolute;right:-4px;top:23px;}
+.portal-bottom:after{content:'';width:10px;height:4px;background:#222;position:absolute;bottom:-4px;left:23px;}
+.dark-theme .portal-bottom:after{background:#6a6a6a;}
+.portal-bottom-long:after{content:'';width:10px;height:64px;background:#222;position:absolute;bottom:-64px;left:23px;opacity:.7;}
+.dark-theme .portal-bottom-long:after{background-color:#6a6a6a;}
+.portal-bl:before{content:'';width:10px;height:4px;background:#222;position:absolute;bottom:-4px;left:8px;}
+.dark-theme .portal-bl:before{background-color:#6a6a6a;}
+.portal-br:after{content:'';width:10px;height:4px;background:#222;position:absolute;bottom:-4px;right:8px;}
+.dark-theme .portal-br:after{background-color:#6a6a6a;}
+.portal-angle:before{content:'';width:10px;height:4px;background:#222;position:absolute;bottom:-4px;right:-7px;transform:rotate(45deg);}
+.dark-theme .portal-angle:before{background-color:#6a6a6a;}
+.overlay{width:56px;height:56px;position:relative;background:rgba(255,0,0,0);display:flex;flex-direction:column;align-items:space-around;justify-content:space-between;}
+.overlay:hover{box-shadow:0 0 15px yellow inset;cursor:url('../images/qmc.png'),auto;}
+.overlay:hover .tooltip{display:block;}
+.overlay:hover .tooltip-right{display:block;}
+.overlay:hover .tooltip-bottom{display:block;}
+.overlay:hover .tooltip-bottom-right{display:block;}
+a{text-decoration:none;cursor:url('../images/linkc.png'),auto;text-shadow:0px 0px 4px #000,0px 0px 3px #000,0px 0px 2px #000,0px 0px 1px #000;}
+a:active{cursor:url('../images/activec.png'),auto;}
+.a-icon{text-shadow:none;}
+.a-icon:active{color:#000;}
+.castle-name{font-size:12px;text-align:center;color:#ff00ff;margin:2px 0 0 0;}
+.castle-name-small{font-size:10px;text-align:center;color:#ff00ff;margin:2px 0 0 0;}
+.town-name{font-size:12px;text-align:center;color:yellow;margin:2px 0 0 0;}
+.field-name-small{text-align:center;font-size:10px;color:white;margin:2px 0 0 0;}
+.field-name{text-align:center;font-size:11px;color:white;margin:2px 0 0 0;}
+.dungeon-caption{text-shadow:0px 0px 4px #000,0px 0px 3px #000;text-align:center;font-size:15px;font-weight:bold;color:#efefef;}
+.guild-dungeon-caption{text-shadow:0px 0px 4px #000,0px 0px 3px #000;text-align:center;font-size:15px;font-weight:bold;color:#ffb3ff;}
+.dungeon-name{text-align:center;font-size:11px;color:powderblue;margin:2px 0 0 0;}
+.dungeon-name-sf{text-align:center;font-size:10px;color:powderblue;margin:2px 0 0 0;}
+.tooltip-text{text-align:left;font-size:12px;padding:1px 3px 1px 3px;margin:0;cursor:url('../images/linkc.png'),auto;white-space:nowrap;}
+.tooltip-text-search{text-align:left;font-size:12px;padding:0 0 0 3px;margin:0;}
+.tooltip-text:hover{background:#ffe4b3;}
+.tooltip-text:active{cursor:url('../images/activec.png'),auto;}
+.map-indicators{display:flex;justify-content:space-around;margin-bottom:5px;}
+.boss-icon{width:10px;height:10px;border-radius:50%;background:linear-gradient(white 1%,red 70%,white 110%);position:relative;cursor:url('../images/qmc.png'),auto;}
+.boss-icon:hover .tooltip{display:block;}
+.boss-icon:active{cursor:url('../images/activec.png'),auto;}
+.miniboss-icon{width:10px;height:10px;border-radius:50%;background:linear-gradient(white 1%,pink 70%,white 110%);position:relative;cursor:url('../images/qmc.png'),auto;}
+.miniboss-icon:hover .tooltip{display:block;}
+.miniboss-icon:active{cursor:url('../images/activec.png'),auto;}
+.dungeon-icon{width:10px;height:10px;border-radius:50%;background:linear-gradient(white 1%,dodgerblue 70%,white 110%);position:relative;cursor:url('../images/qmc.png'),auto;}
+.dungeon-icon:hover .tooltip{display:block;}
+.dungeon-icon:active{cursor:url('../images/activec.png'),auto;}
+@keyframes blink{from{box-shadow:0 0 50px cyan inset;}
+to{box-shadow:0 0 50px transparent inset;}
+}
+.linkc{cursor:url('../images/linkc.png'),auto;}
+.linkc:active{cursor:url('../images/activec.png'),auto;}
+.tooltip{width:auto;display:none;z-index:1;position:absolute;left:45px;top:45px;}
+.tooltip-right{width:auto;display:none;z-index:1;position:absolute;right:45px;top:45px;}
+.tooltip-bottom{width:auto;display:none;z-index:1;position:absolute;left:45px;bottom:45px;}
+.tooltip-bottom-right{width:auto;display:none;z-index:1;position:absolute;right:45px;bottom:45px;}
+.tooltip-fixed-left-panel{width:auto;height:auto;display:block;position:fixed;top:5px;z-index:1;}
+.tooltip-fixed-right-panel{width:300px;height:auto;display:block;position:absolute;right:5px;top:5px;z-index:1;}
+.yt-cont{height:100px;}
+.adspace{width:300px;height:150px;background:#dddddd;margin-bottom:4px;line-height:150px;}
+.tooltip-header{width:100%;height:15px;background:linear-gradient(white 1%,#adc1eb 20%,white 110%);border-top-left-radius:5px;border-top-right-radius:5px;border:1px solid #adc1eb;display:flex;align-items:center;position:relative;}
+.header-icon{display:inline-block;width:8px;height:8px;border:1px solid #4673d2;border-radius:50%;margin-left:2px;background:linear-gradient(white 1%,rgb(91,130,215) 70%,white 110%);}
+.tooltip-body{border:1px solid gray;border-top:1px solid transparent;border-bottom-left-radius:3px;border-bottom-right-radius:3px;width:100%;height:auto;background:white;text-align:center;}
+.bgred{background:rgb(255,128,128)}
+.bgpink{background:rgb(255,204,213)}
+.bgblue{background:#99ccff}
+.bgviolet{background:#ffb3ff}
+hr{margin:0}
+.center{text-align:center;margin:0;}
+.margin-left-5{margin-left:5px;}
+.margin-bottom-5{margin-bottom:5px;}
+.margin-5{margin:5px;}
+#inputValue{animation:search 1s linear infinite alternate;}
+@keyframes search{from{box-shadow:0 0 7px transparent}
+to{box-shadow:0 0 10px yellow}
+}
+#inputValue:focus{animation:none;box-shadow:0 0 12px #99ccff;}
+.flex-column{display:flex;flex-direction:column;border-top:gray}
+.flex-col{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+iframe{border:none;}
+input{border:1px solid gray;width:90%;display:block;margin:auto;margin-top:5px;margin-bottom:5px;}
+.button{background:linear-gradient(white 1%,rgb(217,217,217) 80%,white 110%);border:1px solid #bbbbbb;border-radius:7px;padding:2px 5px;cursor:url('../images/linkc.png'),auto;color:#3c3c3c;width:150px;display:block;margin:auto;margin-bottom:5px;}
+.button:hover{background:linear-gradient(white 1%,rgb(173,193,235) 20%,white 110%);box-shadow:0 0 8px #809fff;}
+.button:active{cursor:url('../images/activec.png'),auto;}
+.center{text-align:center;}
+.flex{display:flex}
+.flex-center{justify-content:center;align-items:center;}
+.poring-bg{background:url('../images/fb-bg.png') no-repeat center center;background-size:cover;}
+.nudge3{margin-top:6px}
+.indent-top-half{margin-top:16px;}
+.indent-top{margin-top:32px;}
+.indent-top2{margin-top:62px;}
+.indent-half{margin-left:32px;}
+.indent-third{margin-left:39.5px;}
+.indent-one{margin-left:62px}
+.indent-1p5{margin-left:92px;}
+.indent-2maps{margin-left:122px;}
+.indent-2p5{margin-left:152px;}
+.indent-3maps{margin-left:182px;}
+.indent-3p5{margin-left:212px;}
+.indent-4maps{margin-left:242px;}
+.indent-4p5{margin-left:272px;}
+.indent-5maps{margin-left:302px;}
+.indent-5p5{margin-left:332px;}
+.indent-6maps{margin-left:362px;}
+.indent-7maps{margin-left:422px;}
+.indent-8maps{margin-left:482px;}
+.indent-10maps{margin-left:602px;}
+.indent-11maps{margin-left:662px;}
+.indent-special{margin-left:45px;}
+.align-beach{margin-left:9px;}
+.align-clock{margin-left:20px;}
+.yuno{background-image:url(../images/yuno-min.png);}
+.yuno_fild06{background-image:url(../images/yuno_fild06-min.png);}
+.ein_fild01{background-image:url(../images/ein_fild01-min.png);}
+.yuno_fild04{background-image:url(../images/yuno_fild04-min.png);}
+.yuno_fild03{background-image:url(../images/yuno_fild03-min.png);}
+.yuno_fild02{background-image:url(../images/yuno_fild02-min.png);}
+.ein_fild03{background-image:url(../images/ein_fild03-min.png);}
+.ein_fild04{background-image:url(../images/ein_fild04-min.png);}
+.ein_fild05{background-image:url(../images/ein_fild05-min.png);}
+.ein_fild06{background-image:url(../images/ein_fild06-min.png);}
+.yuno_fild07{background-image:url(../images/yuno_fild07-min.png);}
+.yuno_fild08{background-image:url(../images/yuno_fild08-min.png);}
+.yuno_fild09{background-image:url(../images/yuno_fild09-min.png);}
+.lhz_fild01{background-image:url(../images/lhz_fild01-min.png);}
+.lhz_fild02{background-image:url(../images/lhz_fild02-min.png);}
+.einbroch{background-image:url(../images/einbroch-min.png);}
+.einbech{background-image:url(../images/einbech-min.png);}
+.ein_fild07{background-image:url(../images/ein_fild07-min.png);}
+.yuno_fild11{background-image:url(../images/yuno_fild11-min.png);}
+.yuno_fild12{background-image:url(../images/yuno_fild12-min.png);}
+.yuno_fild01{background-image:url(../images/yuno_fild01-min.png);}
+.xmas{background-image:url(../images/xmas-min.png);}
+.ama_fild01{background-image:url(../images/ama_fild01-min.png);}
+.gonryun{background-image:url(../images/gonryun-min.png);}
+.louyang{background-image:url(../images/louyang-min.png);}
+.lighthalzen{background-image:url(../images/lighthalzen-min.png);}
+.lhz_fild03{background-image:url(../images/lhz_fild03-min.png);}
+.ein_fild08{background-image:url(../images/ein_fild08-min.png);}
+.ein_fild09{background-image:url(../images/ein_fild09-min.png);}
+.alde_gld{background-image:url(../images/alde_gld-min.png);}
+.aldebaran{background-image:url(../images/aldebaran-min.png);}
+.xmas_fild01{background-image:url(../images/xmas_fild01-min.png);}
+.amatsu{background-image:url(../images/amatsu-min.png);}
+.gon_fild01{background-image:url(../images/gon_fild01-min.png);}
+.lou_fild01{background-image:url(../images/lou_fild01-min.png);}
+.mjolnir_12{background-image:url(../images/mjolnir_12-min.png);}
+.ayothaya{background-image:url(../images/ayothaya-min.png);}
+.ayo_fild01{background-image:url(../images/ayo_fild01-min.png);}
+.ayo_fild02{background-image:url(../images/ayo_fild02-min.png);}
+.mjolnir_01{background-image:url(../images/mjolnir_01-min.png);}
+.mjolnir_02{background-image:url(../images/mjolnir_02-min.png);}
+.mjolnir_03{background-image:url(../images/mjolnir_03-min.png);}
+.mjolnir_04{background-image:url(../images/mjolnir_04-min.png);}
+.mjolnir_05{background-image:url(../images/mjolnir_05-min.png);}
+.glast_01{background-image:url(../images/glast_01-min.png);}
+.gef_fild06{background-image:url(../images/gef_fild06-min.png);}
+.gef_fild05{background-image:url(../images/gef_fild05-min.png);}
+.gef_fild04{background-image:url(../images/gef_fild04-min.png);}
+.mjolnir_06{background-image:url(../images/mjolnir_06-min.png);}
+.mjolnir_07{background-image:url(../images/mjolnir_07-min.png);}
+.mjolnir_08{background-image:url(../images/mjolnir_08-min.png);}
+.mjolnir_10{background-image:url(../images/mjolnir_10-min.png);}
+.mjolnir_11{background-image:url(../images/mjolnir_11-min.png);}
+.nif_fild01{background-image:url(../images/nif_fild01-min.png);}
+.nif_fild02{background-image:url(../images/nif_fild02-min.png);}
+.niflheim{background-image:url(../images/niflheim-min.png);}
+.gef_fild08{background-image:url(../images/gef_fild08-min.png);}
+.gef_fild07{background-image:url(../images/gef_fild07-min.png);}
+.geffen{background-image:url(../images/geffen-min.png);}
+.gef_fild00{background-image:url(../images/gef_fild00-min.png);}
+.prt_fild00{background-image:url(../images/prt_fild00-min.png);}
+.mjolnir_09{background-image:url(../images/mjolnir_09-min.png);}
+.prt_fild01{background-image:url(../images/prt_fild01-min.png);}
+.prt_fild02{background-image:url(../images/prt_fild02-min.png);}
+.prt_fild03{background-image:url(../images/prt_fild03-min.png);}
+.prt_monk{background-image:url(../images/prt_monk-min.png);}
+.prt_gld{background-image:url(../images/prt_gld-min.png);}
+.gef_fild12{background-image:url(../images/gef_fild12-min.png);}
+.gef_fild13{background-image:url(../images/gef_fild13-min.png);}
+.gef_fild09{background-image:url(../images/gef_fild09-min.png);}
+.gef_fild01{background-image:url(../images/gef_fild01-min.png);}
+.prt_fild04{background-image:url(../images/prt_fild04-min.png);}
+.prt_fild05{background-image:url(../images/prt_fild05-min.png);}
+.prontera{background-image:url(../images/prontera-min.png);}
+.prt_fild06{background-image:url(../images/prt_fild06-min.png);}
+.izlu2dun{background-image:url(../images/izlu2dun-min.png);}
+.umbala{background-image:url(../images/umbala-min.png);}
+.gef_fild14{background-image:url(../images/gef_fild14-min.png);}
+.gef_fild10{background-image:url(../images/gef_fild10-min.png);}
+.gef_fild03{background-image:url(../images/gef_fild03-min.png);}
+.gef_fild02{background-image:url(../images/gef_fild02-min.png);}
+.prt_fild07{background-image:url(../images/prt_fild07-min.png);}
+.prt_fild08{background-image:url(../images/prt_fild08-min.png);}
+.izlude{background-image:url(../images/izlude-min.png);}
+.um_fild04{background-image:url(../images/um_fild04-min.png);}
+.gef_fild11{background-image:url(../images/gef_fild11-min.png);}
+.prt_fild11{background-image:url(../images/prt_fild11-min.png);}
+.prt_fild10{background-image:url(../images/prt_fild10-min.png);}
+.prt_fild09{background-image:url(../images/prt_fild09-min.png);}
+.moc_fild01{background-image:url(../images/moc_fild01-min.png);}
+.pay_fild04{background-image:url(../images/pay_fild04-min.png);}
+.pay_arche{background-image:url(../images/pay_arche-min.png);}
+.um_fild01{background-image:url(../images/um_fild01-min.png);}
+.um_fild02{background-image:url(../images/um_fild02-min.png);}
+.um_fild03{background-image:url(../images/um_fild03-min.png);}
+.moc_ruins{background-image:url(../images/moc_ruins-min.png);}
+.moc_fild07{background-image:url(../images/moc_fild07-min.png);}
+.moc_fild06{background-image:url(../images/moc_fild06-min.png);}
+.moc_fild05{background-image:url(../images/moc_fild05-min.png);}
+.moc_fild04{background-image:url(../images/moc_fild04-min.png);}
+.moc_fild02{background-image:url(../images/moc_fild02-min.png);}
+.pay_gld{background-image:url(../images/pay_gld-min.png);}
+.payon{background-image:url(../images/payon-min.png);}
+.pay_fild08{background-image:url(../images/pay_fild08-min.png);}
+.pay_fild09{background-image:url(../images/pay_fild09-min.png);}
+.cmd_fild01{background-image:url(../images/cmd_fild01-min.png);}
+.cmd_fild03{background-image:url(../images/cmd_fild03-min.png);}
+.moc_fild19{background-image:url(../images/moc_fild19-min.png);}
+.morocc{background-image:url(../images/morocc-min.png);}
+.moc_fild10{background-image:url(../images/moc_fild10-min.png);}
+.moc_fild09{background-image:url(../images/moc_fild09-min.png);}
+.moc_fild08{background-image:url(../images/moc_fild08-min.png);}
+.moc_fild13{background-image:url(../images/moc_fild13-min.png);}
+.moc_fild03{background-image:url(../images/moc_fild03-min.png);}
+.pay_fild01{background-image:url(../images/pay_fild01-min.png);}
+.pay_fild07{background-image:url(../images/pay_fild07-min.png);}
+.pay_fild10{background-image:url(../images/pay_fild10-min.png);}
+.alb2trea{background-image:url(../images/alb2trea-min.png);}
+.comodo{background-image:url(../images/comodo-min.png);}
+.cmd_fild02{background-image:url(../images/cmd_fild02-min.png);}
+.cmd_fild04{background-image:url(../images/cmd_fild04-min.png);}
+.cmd_fild06{background-image:url(../images/cmd_fild06-min.png);}
+.cmd_fild08{background-image:url(../images/cmd_fild08-min.png);}
+.moc_fild12{background-image:url(../images/moc_fild12-min.png);}
+.moc_fild11{background-image:url(../images/moc_fild11-min.png);}
+.moc_fild15{background-image:url(../images/moc_fild15-min.png);}
+.moc_fild14{background-image:url(../images/moc_fild14-min.png);}
+.pay_fild11{background-image:url(../images/pay_fild11-min.png);}
+.pay_fild02{background-image:url(../images/pay_fild02-min.png);}
+.pay_fild03{background-image:url(../images/pay_fild03-min.png);}
+.alberta{background-image:url(../images/alberta-min.png);}
+.tur_dun01{background-image:url(../images/tur_dun01-min.png);}
+.cmd_fild07{background-image:url(../images/cmd_fild07-min.png);}
+.cmd_fild09{background-image:url(../images/cmd_fild09-min.png);}
+.moc_fild18{background-image:url(../images/moc_fild18-min.png);}
+.moc_fild17{background-image:url(../images/moc_fild17-min.png);}
+.moc_fild16{background-image:url(../images/moc_fild16-min.png);}
+.pay_fild05{background-image:url(../images/pay_fild05-min.png);}
+.pay_fild06{background-image:url(../images/pay_fild06-min.png);}
+.wmd{background-size:cover}
+.wmd:hover{box-shadow:0 0 15px red inset;}
+.alde_dun01{background-image:url(../images/alde_dun01.png);}
+.alde_dun02{background-image:url(../images/alde_dun02.png);}
+.alde_dun03{background-image:url(../images/alde_dun03.png);}
+.alde_dun04{background-image:url(../images/alde_dun04.png);}
+.anthell01{background-image:url(../images/anthell01.png);}
+.anthell02{background-image:url(../images/anthell02.png);}
+.beach_dun{background-image:url(../images/beach_dun.png);}
+.beach_dun2{background-image:url(../images/beach_dun2.png);}
+.beach_dun3{background-image:url(../images/beach_dun3.png);}
+.c_tower1{background-image:url(../images/c_tower1.png);}
+.c_tower2{background-image:url(../images/c_tower2.png);}
+.c_tower3{background-image:url(../images/c_tower3.png);}
+.c_tower4{background-image:url(../images/c_tower4.png);}
+.gef_dun00{background-image:url(../images/gef_dun00.png);}
+.gef_dun01{background-image:url(../images/gef_dun01.png);}
+.gef_dun02{background-image:url(../images/gef_dun02.png);}
+.gl_cas01{background-image:url(../images/gl_cas01.png);}
+.gl_cas02{background-image:url(../images/gl_cas02.png);}
+.gl_church{background-image:url(../images/gl_church.png);}
+.gl_chyard{background-image:url(../images/gl_chyard.png);}
+.gl_dun01{background-image:url(../images/gl_dun01.png);}
+.gl_dun02{background-image:url(../images/gl_dun02.png);}
+.gl_in01{background-image:url(../images/gl_in01.png);}
+.gl_knt01{background-image:url(../images/gl_knt01.png);}
+.gl_knt02{background-image:url(../images/gl_knt02.png);}
+.gl_prison{background-image:url(../images/gl_prison.png);}
+.gl_prison1{background-image:url(../images/gl_prison1.png);}
+.gl_sew01{background-image:url(../images/gl_sew01.png);}
+.gl_sew02{background-image:url(../images/gl_sew02.png);}
+.gl_sew03{background-image:url(../images/gl_sew03.png);}
+.gl_sew04{background-image:url(../images/gl_sew04.png);}
+.gl_step{background-image:url(../images/gl_step.png);}
+.gld_dun01{background-image:url(../images/gld_dun01.png);}
+.gld_dun02{background-image:url(../images/gld_dun02.png);}
+.gld_dun03{background-image:url(../images/gld_dun03.png);}
+.gld_dun04{background-image:url(../images/gld_dun04.png);}
+.in_sphinx1{background-image:url(../images/in_sphinx1.png);}
+.in_sphinx2{background-image:url(../images/in_sphinx2.png);}
+.in_sphinx3{background-image:url(../images/in_sphinx3.png);}
+.in_sphinx4{background-image:url(../images/in_sphinx4.png);}
+.in_sphinx5{background-image:url(../images/in_sphinx5.png);}
+.iz_dun00{background-image:url(../images/iz_dun00.png);}
+.iz_dun01{background-image:url(../images/iz_dun01.png);}
+.iz_dun02{background-image:url(../images/iz_dun02.png);}
+.iz_dun03{background-image:url(../images/iz_dun03.png);}
+.iz_dun04{background-image:url(../images/iz_dun04.png);}
+.mag_dun01{background-image:url(../images/mag_dun01.png);}
+.mag_dun02{background-image:url(../images/mag_dun02.png);}
+.mjo_dun01{background-image:url(../images/mjo_dun01.png);}
+.mjo_dun02{background-image:url(../images/mjo_dun02.png);}
+.mjo_dun03{background-image:url(../images/mjo_dun03.png);}
+.moc_pryd01{background-image:url(../images/moc_pryd01.png);}
+.moc_pryd02{background-image:url(../images/moc_pryd02.png);}
+.moc_pryd03{background-image:url(../images/moc_pryd03.png);}
+.moc_pryd04{background-image:url(../images/moc_pryd04.png);}
+.moc_pryd05{background-image:url(../images/moc_pryd05.png);}
+.moc_pryd06{background-image:url(../images/moc_pryd06.png);}
+.orcsdun01{background-image:url(../images/orcsdun01.png);}
+.orcsdun02{background-image:url(../images/orcsdun02.png);}
+.pay_dun00{background-image:url(../images/pay_dun00.png);}
+.pay_dun01{background-image:url(../images/pay_dun01.png);}
+.pay_dun02{background-image:url(../images/pay_dun02.png);}
+.pay_dun03{background-image:url(../images/pay_dun03.png);}
+.pay_dun04{background-image:url(../images/pay_dun04.png);}
+.prt_maze01{background-image:url(../images/prt_maze01.png);}
+.prt_maze02{background-image:url(../images/prt_maze02.png);}
+.prt_maze03{background-image:url(../images/prt_maze03.png);}
+.prt_sewb1{background-image:url(../images/prt_sewb1.png);}
+.prt_sewb2{background-image:url(../images/prt_sewb2.png);}
+.prt_sewb3{background-image:url(../images/prt_sewb3.png);}
+.prt_sewb4{background-image:url(../images/prt_sewb4.png);}
+.treasure01{background-image:url(../images/treasure01.png);}
+.treasure02{background-image:url(../images/treasure02.png);}
+.tur_dun02{background-image:url(../images/tur_dun02.png);}
+.tur_dun03{background-image:url(../images/tur_dun03.png);}
+.tur_dun04{background-image:url(../images/tur_dun04.png);}
+.xmas_dun01{background-image:url(../images/xmas_dun01.png);}
+.xmas_dun02{background-image:url(../images/xmas_dun02.png);}
+.juperos_01{background-image:url(../images/juperos_01.png);}
+.juperos_02{background-image:url(../images/juperos_02.png);}
+.jupe_core{background-image:url(../images/jupe_core.png);}
+.kh_dun01{background-image:url(../images/kh_dun01.png);}
+.kh_dun02{background-image:url(../images/kh_dun02.png);}
+.geffenia01{background-image:url(../images/gefenia01.png);}
+.geffenia02{background-image:url(../images/gefenia02.png);}
+.geffenia03{background-image:url(../images/gefenia03.png);}
+.geffenia04{background-image:url(../images/gefenia04.png);}
+@media screen and (min-width:1045px){.tooltip-fixed-left-panel{left:5px;}
+}
+@media screen and (max-width:1044px){.headerbody,.footerbody,.tooltip-fixed-right-panel,.guidelines{display:none;}
+.inner-body{justify-content:flex-start;}
+.tooltip-fixed-left-panel{right:20px;}
+}
+@media print {}
